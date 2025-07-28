@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+        <title>cardioKare</title>
+    </head>
+
+
+
+
+ <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">CardioKare.</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" alt="About and Resources Page">About</a>
+            <a href="about.html#resources">Resources</a>
+
+        
+        </div>
+
+    </nav>
+
+
+
+    <!-- heading -->
+    <div class="coverSection">
+        <h1>CardioKare</h1>
+    </div>
+
+
+    <!-- row section -->   
+    <div class = "rowSection">
+        
+        <p class= "text">Coronary Artery Disease — it's a serious and often silent threat. Affecting millions worldwide, this cardiovascular condition can develop quietly over time, narrowing arteries and restricting blood flow to the heart. Early detection is key, and with the help of AI, we're making it easier to assess your risk before symptoms even appear.</p>
+
+        <img src = 'heart.png' alt = "guildHallLogo">
+
+    </div>
+
+
+
+
+
+    
+            <!-- Form Section - CHANGED THIS DIV TO FORM TAG -->
+        <form class="registration-container" action="/predict" method="POST">
+            <h1>Heart Health Assessment</h1>
+            
+            <div class="registration-box">
+                <!-- Medical Questions Section -->
+                <div class="input-group">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Age</label>
+                            <input type="number" name="age" id="age" min="18" max="120" placeholder="Enter your age" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Chest Pain Level (1-4)</label>
+                            <input type="number" name="chestPain" id="chestPain" min="1" max="4" placeholder="Enter level (1-4)" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Resting Heart Rate (bpm)</label>
+                            <input type="number" name="bpm" id="bpm" min="30" max="200" placeholder="Enter your bpm" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Blood Sugar > 120 mg/dL?</label>
+                            <select name="bloodSugar" id="bloodSugar" required>
+                                <option value="">Select option</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Exercise Discomfort?</label>
+                            <select name="discomfort" id="discomfort" required>
+                                <option value="">Select option</option>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <!-- Bottom Section - Gender + Button -->
+                    <div class="bottom-section">
+                        <div class="gender-group">
+                            <label>Sex</label>
+                            <div class="radio-options">
+                                <label><input type="radio" name="sex" value="1" required> Male </label>
+                                <label><input type="radio" name="sex" value="0"> Female </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="calculate-btn">Calculate Risk</button>
+                    
+                    <!-- Prediction Result Display - ADDED THIS -->
+                    {% if prediction_text %}
+                    <div class="prediction-result">
+                        <h3>Result: {{ prediction_text }}</h3>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </form>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ </body>
+
+
+
+</html>
