@@ -1,11 +1,32 @@
 # CardioKare
 ## Description:
 CardioKare is a webbased health application that uses machine learning to assess a user's likelihood of have Coronary Artery Disease, which is the most common heart disease in the world. By analyzing data inputed by the everyday user CardioKare offers educational resources and facts to promote awareness and prevention of a disease which is the leading cause of death globally. CardioKare combines software engineering, biomedical research, and data science to promote early detection and treatment of a generally uncurable disease.
+
 ## Technologies Used:
+-Python (for machine learning backend)
+-HTML (for webpage structure)
+-CSS (for styling and design)
+-Flask (for web application framework)
+-Random Forest Classifier (for heart disease prediction model)
+-Scikit-learn (for machine learning tools)
+-Pandas & NumPy (for data processing)
+
 ## SetUp/Installation: 
-Click the link below to access our website.
+- sklearn
+- joblib
+- Flask
+  (all requirements in .txt file)
+  
 ## Demo Video Link: 
+
+
 ## Contributions: 
+💡Full stack Developer | Data Scientist | Machine Learning Engineer 
+Machine Learning Model: Trained a Random Forest Classifier on a cleaned Kaggle dataset to predict Coronary Artery Disease risk with 89% accuracy.
+Frontend: Designed a user-friendly web interface using HTML and CSS to collect patient data via form inputs that match the model’s expected format.
+Backend: Built with Flask to connect the frontend form to the machine learning model, process user inputs, and return prediction results in real time.
+Data Preprocessing: Cleaned and formatted raw medical data from Kaggle to ensure accurate training and input matching.
+
 💻 Software Engineer - Lia (Front-end), Mateo (Back-end) 
 Web App Frontend: Build the user-facing platform for inputting patient data and displaying risk predictions, done with HTML, CSS
 Backend Logic: Translate MATLAB models into Python (or use MATLAB Compiler SDK to deploy models) for risk scoring using API and Flask. 
