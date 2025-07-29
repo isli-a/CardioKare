@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}" />
         <title>cardioKare</title>
     </head>
 
@@ -15,9 +15,9 @@
         <div class="nav-brand">CardioKare.</div>
 
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html" alt="About and Resources Page">About</a>
-            <a href="about.html#resources">Resources</a>
+            <a>Home</a>
+            <a>About</a>
+            <a>Resources</a>
 
         
         </div>
@@ -26,31 +26,30 @@
 
 
 
-    <!-- heading -->
-    <div class="coverSection">
+
+<div class="hero-section">
+    <div class="hero-content">
         <h1>CardioKare</h1>
+        <p class="hero-text">Coronary Artery Disease — it's a serious and often silent threat. Affecting millions worldwide, this cardiovascular condition can develop quietly over time, narrowing arteries and restricting blood flow to the heart. Early detection is key, and with the help of AI, we're making it easier to assess your risk before symptoms even appear.</p>
     </div>
-
-
-    <!-- row section -->   
-    <div class = "rowSection">
-        
-        <p class= "text">Coronary Artery Disease — it's a serious and often silent threat. Affecting millions worldwide, this cardiovascular condition can develop quietly over time, narrowing arteries and restricting blood flow to the heart. Early detection is key, and with the help of AI, we're making it easier to assess your risk before symptoms even appear.</p>
-
-        <img src = 'heart.png' alt = "guildHallLogo">
-
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='heart.png') }}" alt="heart illustration">
     </div>
+</div>
 
 
 
 
 
-    
-            <!-- Form Section - CHANGED THIS DIV TO FORM TAG -->
+            <!-- Form Section  -->
         <form class="registration-container" action="/predict" method="POST">
             <h1>Heart Health Assessment</h1>
             
+
+
             <div class="registration-box">
+
+
                 <!-- Medical Questions Section -->
                 <div class="input-group">
                     <div class="form-row">
@@ -64,6 +63,8 @@
                         </div>
                     </div>
                     
+
+
                     <div class="form-row">
                         <div class="form-group">
                             <label>Resting Heart Rate (bpm)</label>
@@ -90,7 +91,9 @@
                         </div>
                     </div>
                 
-                    <!-- Bottom Section - Gender + Button -->
+
+
+                    <!-- Bottom Section -->
                     <div class="bottom-section">
                         <div class="gender-group">
                             <label>Sex</label>
@@ -103,7 +106,10 @@
                     
                     <button type="submit" class="calculate-btn">Calculate Risk</button>
                     
-                    <!-- Prediction Result Display - ADDED THIS -->
+
+
+
+                    <!-- Prediction Result Display  -->
                     {% if prediction_text %}
                     <div class="prediction-result">
                         <h3>Result: {{ prediction_text }}</h3>
@@ -114,23 +120,153 @@
         </form>
 
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
- </body>
 
 
 
+
+
+
+
+<!--Resource section-->
+    <div id="resources"></div>
+
+
+        <!-- heading -->
+        <div class="coverSection">
+            <h1>Resources</h1>
+        </div>
+        <div class="columnSection">
+
+
+            <!-- Health Advice on LEFT -->
+            <div class="health-advice">
+                <h2>Coronary Artery Disease</h2>
+                <p>Make sure to check with your cardiologist!!!</p>
+                <p>With today's knowledge and resources, you can take powerful steps to protect your heart. Small, consistent changes in how you eat, move, and manage stress can dramatically alter your health trajectory.</p>
+                <div><strong>Take care of your coronary artery disease by:</strong>
+                    
+
+
+                    </div>
+                    <ul class="lifestyle">
+                        <li>Taking all prescribed medications regularly and attending follow-up appointments with your cardiologist.</li>
+                        <li>Managing stress through techniques like meditation, deep breathing exercises, or counseling services. </li> 
+                        <li>Quitting smoking and avoiding secondhand smoke to significantly reduce your risk of further heart damage.</li> 
+                        <li>Exercising regularly with at least 150 minutes of moderate aerobic activity per week, as approved by your physician.</li> 
+                        <li>Eating a heart-healthy diet low in saturated fats, sodium, and cholesterol. Focus on fruits, vegetables, whole grains, and lean proteins.</li> 
+                    </ul>
+            </div>
+
+            
+            <!-- Contact Resources on RIGHT -->
+            <div class="resource-column">
+                <div class="resource-item">
+                    <div class="contact-info">
+                        <div class="contact-group">
+                            <div class="phone-number">1-800-HEART-55</div>
+                            <div class="company-name" style="align-items: center;">American Heart Association</div>
+
+
+                        </div>
+                        <div class="contact-group">
+                            <div class="phone-number">1-888-825-HEAL</div>
+                            <div class="company-name">Cardiac Rehabilitation Network</div>
+                        </div>
+
+
+                        <div class="contact-group">
+                            <div class="phone-number">1-800-QUIT-NOW</div>
+                            <div class="company-name">National Quitline</div>
+                        </div>
+
+                        
+                        <div class="contact-group">
+                            <div class="phone-number">1-800-273-TALK</div>
+                            <div class="company-name">Mental Health America</div>
+                        </div>
+
+
+                        <div class="contact-group">
+                            <div class="phone-number">1-800-MED-INFO</div>
+                            <div class="company-name">Cardiac Medication Helpline</div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <!-- About section -->
+    <div id="about"></div>
+        <div class="coverSection" style="padding-top:10px;">
+            <h1>About Coronary Artery Disease</h1>
+        </div>
+        
+
+        <div class="cad-container">
+            <div class="warning-box">
+                <h2>The Silent Threat: Asymptomatic CAD</h2>
+                <p>Many people with CAD experience no symptoms until the disease is advanced. This "silent CAD" makes early detection through risk factor assessment crucial, especially if you have family history. Regular check-ups can catch problems before symptoms appear.</p>
+            </div>
+
+
+            <h2>What is Coronary Artery Disease?</h2>
+            <p>A disease wherein the heart has insufficient oxygen delivery due to damaged or clogged arteries. Unhealthy arteries are results of high blood pressure, high cholesterol, obesity or genes (CAD present in family history). Consequently, the arteries get clogged, narrowed, or tightened in ways that disable or lessen oxygen delivery.</p>
+
+
+            <h3>Lifestyle Factors That Lead to CAD:</h3>
+            <ul>
+                <li><strong>Unhealthy diet:</strong> High cholesterol foods</li>
+                <li><strong>Smoking or exposure to second-hand smoke</strong></li>
+                <li><strong>Sedentary lifestyle:</strong> Less physical activity</li>
+                <li><strong>Stress or lack of sleep:</strong> Tightens vessels & raises blood pressure</li>
+                <li><strong>Excess intake of alcohol or tobacco:</strong> Releases triglycerides in the blood and develops fatty deposits or plaques on artery walls</li>
+            </ul>
+
+
+            <h2>Preventing the Risk of CAD</h2>
+            <ul>
+                <li>Avoid smoking, drinking, tobacco</li>
+                <li>Exercise to regulate blood pressure levels</li>
+                <li>Avoid stress & sleep on time</li>
+                <li>Eat a balanced diet</li>
+                <li>Avoid refined sugars & excessive intake of added sugars</li>
+            </ul>
+
+
+            <h2>Treatments for CAD</h2>
+            
+
+            <h3>Medication:</h3>
+            <ul>
+                <li><strong>Blood thinning medicines:</strong> Aspirin & clopidogrel decrease blood clotting so blood flows smoothly</li>
+                <li><strong>Statins:</strong> To lower cholesterol levels</li>
+                <li><strong>Vasodilators (Nitrates):</strong> Widen arteries to increase pressure</li>
+            </ul>
+
+
+
+            <h3>Interventional Procedures/Surgeries:</h3>
+            <ul>
+                <li><strong>Coronary Angioplasty:</strong> A deflated balloon is inserted in the artery & inflated to push fatty deposits outward, widening the artery. A metal stent (wire mesh tube) secures the artery to avoid collapse.</li>
+                <li><strong>Coronary artery bypass:</strong> Blood is diverted from the damaged artery to a healthy blood vessel (usually from the leg - saphenous vein - or chest - internal mammary artery)</li>
+                <li><strong>Heart transplant:</strong> A severely damaged heart is replaced with a donor heart</li>
+            </ul>
+
+
+
+            <div class="fact-box">
+                <h2>Is CAD Genetic or Hereditary?</h2>
+                <p>Conditions that lead to it include Type 1 diabetes and hypertension which are genetic and can eventually develop into CAD. However, if an individual counters the effect of their genetic diseases by exercising and eating healthy, they can completely prevent CAD.</p>
+                <p>The DNA passed by our parents is unchangeable. However, as we age, our DNA sequences slightly differ from the ones we were born with. In short, the risk changes with lifestyle but is considered hereditary.</p>
+                <p><strong>NIH Fact:</strong> "60-75% of offspring develop heart diseases due to family history."</p>
+            </div>
+        </div>
+
+
+        
+</body>
 </html>
