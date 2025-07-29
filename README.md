@@ -5,7 +5,8 @@ CardioKare is a webbased health application that uses machine learning to assess
 Html, CSS, Python, Visual Studio, Machine Learning Models
 ## SetUp/Installation: 
 Click the link below to access our website. Make sure to have joblib, flask, and stile-learn installed.
-## Demo Video Link: https://www.youtube.com/watch?v=pfvq0AMIom0
+## Demo Video Link: https://www.youtube.com/watch?v=pfvq0AMIom0  
+Alternately: https://drive.google.com/file/d/11mEJhQQT72Ga2mKk0GqtMzBXPojUBP_h/view?usp=sharing (Watch this when the mic starts to get weird in the first video)
 ## Contributions: 
 💻 Software Engineer - Lia (Front-end), Mateo (Back-end) 
 Web App Frontend: Build the user-facing platform for inputting patient data and displaying risk predictions, done with HTML, CSS
