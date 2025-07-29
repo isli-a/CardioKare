@@ -2,8 +2,9 @@
 ## Description:
 CardioKare is a webbased health application that uses machine learning to assess a user's likelihood of have Coronary Artery Disease, which is the most common heart disease in the world. By analyzing data inputed by the everyday user CardioKare offers educational resources and facts to promote awareness and prevention of a disease which is the leading cause of death globally. CardioKare combines software engineering, biomedical research, and data science to promote early detection and treatment of a generally uncurable disease.
 ## Technologies Used:
+Html, CSS, Python, Visual Studio, Machine Learning Models
 ## SetUp/Installation: 
-Click the link below to access our website.
+Click the link below to access our website. Make sure to have joblib, flask, and stile-learn installed.
 ## Demo Video Link: 
 ## Contributions: 
 💻 Software Engineer - Lia (Front-end), Mateo (Back-end) 
@@ -21,4 +22,4 @@ Risk Algorithms: Define CAD risk factors (e.g., Framingham Risk Score, calcium s
 💻 Research Engineer - Reshma
 CAD Processing: ProAssist SWE in diagraming a way to build the Software, 
 CAD Research - Helped conduct research on CAD and its effects, exporting the needed materials to assist SWER. 
-
+Video Creation
